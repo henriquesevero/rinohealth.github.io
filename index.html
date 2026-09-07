@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diário de Treino — Projeto Shape do Lebron (ou quase)</title>
+<meta name="description" content="Registro semanal de cargas, séries e evolução de treino, com espaço para vídeos de execução.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-flex">
+    <div class="header-main">
+      <p class="eyebrow">Diário de treino</p>
+      <div class="title-row">
+        <h1 id="meta-programa">Programa</h1>
+        <svg class="league-logo" viewBox="20 0 160 130" role="img" aria-label="Distintivo da liga do shape">
+          <rect x="22" y="2" width="156" height="126" rx="10" fill="#ffffff"/>
+          <clipPath id="badgeClip">
+            <rect x="26" y="6" width="148" height="118" rx="7"/>
+          </clipPath>
+          <g clip-path="url(#badgeClip)">
+            <rect x="26" y="6" width="148" height="118" fill="#0a2351"/>
+            <polygon points="133.4,6 146.2,6 74.5,124 61.8,124" fill="#ffffff"/>
+            <polygon points="146.2,6 174,6 174,124 61.8,124" fill="#c8102e"/>
+            <g fill="none" stroke="#ffffff" stroke-linecap="round">
+              <path d="M86,42 L66,52" stroke-width="20"/>
+              <path d="M66,52 L76,24" stroke-width="13"/>
+              <path d="M114,42 L134,52" stroke-width="20"/>
+              <path d="M134,52 L124,24" stroke-width="13"/>
+              <path d="M92,80 L84,100" stroke-width="20"/>
+              <path d="M84,100 L88,120" stroke-width="13"/>
+              <path d="M108,80 L116,100" stroke-width="20"/>
+              <path d="M116,100 L112,120" stroke-width="13"/>
+            </g>
+            <polygon points="86,40 114,40 108,80 92,80" fill="#ffffff"/>
+            <circle cx="76" cy="24" r="9" fill="#ffffff"/>
+            <circle cx="124" cy="24" r="9" fill="#ffffff"/>
+            <circle cx="100" cy="26" r="13" fill="#ffffff"/>
+          </g>
+        </svg>
+      </div>
+      <p class="sub">Meu caderno de treino digital: peso, séries e vídeo de execução semana a semana</p>
+      <div class="header-meta">
+        <span>Período: <strong id="meta-periodo">—</strong></span>
+        <span>Última semana registrada: <strong id="meta-atualizacao">—</strong></span>
+      </div>
+      <p class="header-goal" id="header-goal" hidden><span class="tag-mini goal">Meta</span><span id="header-goal-text"></span></p>
+      <div class="month-switcher" id="month-switcher" hidden></div>
+    </div>
+    <div class="header-photo">
+      <img src="assets/perfil.jpg" alt="Foto do atleta" onerror="this.parentElement.classList.add('is-empty')">
+    </div>
+  </div>
+</header>
+
+<nav class="day-nav">
+  <div class="wrap">
+    <a href="#resumo" class="accent">Resumo</a>
+    <a href="#pull">Segunda · Pull</a>
+    <a href="#push">Terça · Push</a>
+    <a href="#legs">Quarta · Legs</a>
+    <a href="#fullbody">Sábado · Full Body</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="block" id="resumo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Resumo da semana</h2>
+        <span class="tag">Comparado à semana anterior</span>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card up">
+          <div class="num" id="stat-up">0</div>
+          <div class="label">Exercícios que evoluíram de carga</div>
+        </div>
+        <div class="stat-card flat">
+          <div class="num" id="stat-flat">0</div>
+          <div class="label">Mantiveram a mesma carga</div>
+        </div>
+        <div class="stat-card down">
+          <div class="num" id="stat-down">0</div>
+          <div class="label">Reduziram a carga</div>
+        </div>
+      </div>
+
+      <div class="callout-grid">
+        <div class="callout highlight">
+          <h3>▲ Destaques da semana</h3>
+          <ul id="highlight-list"></ul>
+        </div>
+        <div class="callout attention">
+          <h3>⚑ Pontos de atenção</h3>
+          <ul id="attention-list"></ul>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><span class="dot up"></span>Evoluiu — mais volume que a semana anterior</span>
+        <span><span class="dot flat"></span>Manteve — mesma carga e repetições</span>
+        <span><span class="dot down"></span>Atenção — carga ou volume caiu</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="pull">
+    <div class="wrap">
+      <div class="day-title"><span class="pill">Segunda-feira</span></div>
+      <p class="day-sub">Foco: Pull — costas, posterior de ombro e bíceps.</p>
+      <div class="ex-grid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="push">
+    <div class="wrap">
+      <div class="day-title"><span class="pill">Terça-feira</span></div>
+      <p class="day-sub">Foco: Push — peito, ombro e tríceps.</p>
+      <div class="ex-grid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="legs">
+    <div class="wrap">
+      <div class="day-title"><span class="pill">Quarta-feira</span></div>
+      <p class="day-sub">Foco: Legs — quadríceps, posterior de coxa, adutores e panturrilha.</p>
+      <div class="ex-grid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="fullbody">
+    <div class="wrap">
+      <div class="day-title"><span class="pill">Sábado</span></div>
+      <p class="day-sub">Foco: Full Body — corpo inteiro fechando a semana.</p>
+      <div class="ex-grid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Diário de treino atualizado semanalmente · <a href="#resumo">voltar ao topo</a>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
