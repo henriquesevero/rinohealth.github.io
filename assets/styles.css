@@ -213,6 +213,84 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 
+.trainer-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 0;
+}
+
+.trainer-avatar {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--terracotta);
+}
+
+.trainer-tag .trainer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 13px;
+}
+
+.trainer-tag strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.trainer-tag a {
+  color: var(--terracotta);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.trainer-tag a:hover { text-decoration: underline; }
+
+.trainer-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 14px 18px;
+  background: var(--paper-raised-2);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--terracotta);
+  border-radius: var(--radius);
+  max-width: 380px;
+}
+
+.trainer-avatar-lg {
+  flex: none;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--terracotta);
+}
+
+.trainer-card-info .trainer-name {
+  margin: 4px 0 6px;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.trainer-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--terracotta);
+  text-decoration: none;
+}
+
+.trainer-ig:hover { text-decoration: underline; }
+
 .month-switcher {
   display: flex;
   flex-wrap: wrap;
