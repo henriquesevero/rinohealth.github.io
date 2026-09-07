@@ -159,19 +159,17 @@ a { color: inherit; }
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    background:
+      linear-gradient(180deg, rgba(11, 13, 16, 0.55) 0%, rgba(11, 13, 16, 0.9) 100%),
+      url('perfil.jpg') center/cover no-repeat;
+  }
   .header-flex {
     flex-direction: row;
     gap: 16px;
   }
   .header-photo {
-    width: 108px;
-    height: 108px;
-    border-radius: 50%;
-    border-width: 3px;
-    margin: 0;
-  }
-  .header-photo.is-empty::after {
-    font-size: 9px;
+    display: none;
   }
   .title-row {
     gap: 10px;
