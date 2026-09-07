@@ -161,11 +161,11 @@ a { color: inherit; }
 @media (max-width: 640px) {
   .header-flex {
     flex-direction: row;
-    align-items: center;
+    gap: 16px;
   }
   .header-photo {
-    width: 84px;
-    height: 84px;
+    width: 108px;
+    height: 108px;
     border-radius: 50%;
     border-width: 3px;
     margin: 0;
