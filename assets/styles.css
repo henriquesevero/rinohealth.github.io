@@ -473,6 +473,18 @@ main > section.block:last-child {
   border-radius: 3px;
 }
 
+.day-title .day-check {
+  display: none;
+  color: var(--up);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.day-title.done .day-check {
+  display: inline-block;
+}
+
 .day-sub {
   font-size: 13.5px;
   color: var(--muted);
@@ -692,6 +704,97 @@ table.log td.set-cell span.reps { color: var(--muted); font-size: 12px; }
 .legend .dot.up { background: var(--up); }
 .legend .dot.flat { background: var(--flat); }
 .legend .dot.down { background: var(--down); }
+
+/* ---------- PROGRAM PAGE ---------- */
+
+.day-nav a.nav-programa {
+  margin-left: auto;
+  color: var(--brand-soft);
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.split-day {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.split-day.off {
+  border-top-color: var(--line-strong);
+  opacity: 0.6;
+}
+
+.split-day .dow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.split-day .foco {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.split-day.off .foco { color: var(--muted); }
+
+.callout.info { border-left-color: var(--terracotta); }
+.callout.info h3 { color: var(--brand-soft); }
+
+.callout.danger { border-left-color: var(--down); }
+.callout.danger h3 { color: var(--down); }
+
+.callout .rule-note {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.ex-ref-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px 14px;
+}
+
+.ex-ref-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+.ex-ref-list .sets-badge {
+  flex: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--terracotta);
+  background: rgba(255, 106, 26, 0.12);
+  border-radius: 3px;
+  padding: 3px 7px;
+}
 
 /* ---------- FOOTER ---------- */
 

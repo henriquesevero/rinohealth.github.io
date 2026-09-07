@@ -36,7 +36,7 @@
 
   function badgeHtml(a) {
     if (a.status === "sem-carga") return `<span class="badge neutral">Sem carga</span>`;
-    if (a.status === "novo") return `<span class="badge neutral">Novo</span>`;
+    if (a.status === "novo") return `<span class="badge neutral">1ª semana</span>`;
     if (a.status === "up") return `<span class="badge up">↑ Evoluiu · ${fmtPct(a.deltaPct)}</span>`;
     if (a.status === "down") return `<span class="badge down">↓ Atenção · ${fmtPct(a.deltaPct)}</span>`;
     return `<span class="badge flat">→ Manteve</span>`;
@@ -244,9 +244,11 @@
     const counts = mes.diasTreino.map(weeksCountForDia);
     const maxWeeks = Math.max(0, ...counts);
     mes.diasTreino.forEach((dia, i) => {
+      const done = maxWeeks > 0 && counts[i] === maxWeeks;
       const link = document.getElementById(`nav-${dia.id}`);
-      if (!link) return;
-      link.classList.toggle("done", maxWeeks > 0 && counts[i] === maxWeeks);
+      if (link) link.classList.toggle("done", done);
+      const title = document.querySelector(`#${dia.id} .day-title`);
+      if (title) title.classList.toggle("done", done);
     });
   }
 
