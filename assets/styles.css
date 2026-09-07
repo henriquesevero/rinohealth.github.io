@@ -278,13 +278,13 @@ a { color: inherit; }
   font-weight: 600;
 }
 
-.trainer-tag a {
+.trainer-info a {
   color: var(--terracotta);
   text-decoration: none;
   font-weight: 600;
 }
 
-.trainer-tag a:hover { text-decoration: underline; }
+.trainer-info a:hover { text-decoration: underline; }
 
 .trainer-card {
   display: flex;
