@@ -159,14 +159,18 @@ a { color: inherit; }
 
 @media (max-width: 640px) {
   .header-flex {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    align-items: center;
   }
   .header-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    max-width: 320px;
-    margin: 0 auto;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border-width: 3px;
+    margin: 0;
+  }
+  .header-photo.is-empty::after {
+    font-size: 9px;
   }
   .site-header h1 {
     white-space: normal;
