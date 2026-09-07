@@ -40,8 +40,8 @@
 const TRAINING_LOG = {
   meses: [
     {
-      id: "2026-07",
-      label: "Julho 2026",
+      id: "2026-09",
+      label: "Setembro 2026",
       programa: "Projeto Shape do Lebron (ou quase)",
       metaSemana: "Nessa semana, tentarei evoluir ao menos 1kg em cada exercício.",
 

@@ -234,6 +234,22 @@
     }
   }
 
+  function weeksCountForDia(dia) {
+    return Math.max(0, ...dia.exercicios.map((ex) => ex.semanas.length));
+  }
+
+  // Marca no menu, com check verde, os dias cujo treino já foi registrado
+  // nesta semana (ou seja, estão à frente dos demais dias em nº de semanas).
+  function renderNav(mes) {
+    const counts = mes.diasTreino.map(weeksCountForDia);
+    const maxWeeks = Math.max(0, ...counts);
+    mes.diasTreino.forEach((dia, i) => {
+      const link = document.getElementById(`nav-${dia.id}`);
+      if (!link) return;
+      link.classList.toggle("done", maxWeeks > 0 && counts[i] === maxWeeks);
+    });
+  }
+
   function renderMonthSwitcher() {
     const el = document.getElementById("month-switcher");
     if (MESES.length <= 1) {
@@ -258,6 +274,7 @@
     clearDayGrids();
     mes.diasTreino.forEach(renderDay);
     renderSummary(mes);
+    renderNav(mes);
     renderMonthSwitcher();
   }
 
